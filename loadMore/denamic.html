@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>loop-testing</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 1px solid black;
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <table>
+        <thead>
+          <tr>
+            <th>Country</th>
+            <th>Capital</th>
+            <th>Currency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <script>
+            const country = ["Bangladesh", "India", "Pakistan"];
+            const capital = ["Dhaka", "Dilhi", "Islamabad"];
+            const currency = ["Taka", "Rupee", "Rupiya"];
+
+            for (
+              let i = 0;
+              i <= country.length && capital.length && currency.length;
+              i++
+            ) {
+              // Stop Loop from infinity
+              if (i === country.length) {
+                break;
+              }
+              // Print in web
+              document.write(`
+              <tr>
+                <td>${country[i]}</td>
+                <td>${capital[i]}</td>
+                <td>${currency[i]}</td>
+              </tr>
+            `);
+            }
+          </script>
+        </tbody>
+      </table>
+    </div>
+  </body>
+</html>
