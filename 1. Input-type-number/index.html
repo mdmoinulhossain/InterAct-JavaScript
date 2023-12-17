@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-              form {
+      form {
         width: 300px;
         margin: 0 auto;
         text-align: center;
@@ -94,6 +94,11 @@
         value = isNaN(value) ? 0 : value;
         value++;
         document.getElementById("number").value = value;
+        // Check if value is less than 5 - Limit the value
+        // if (value < 5) { 
+        //   value++;
+        //   document.getElementById("number").value = value;
+        // }
       }
 
       function decreaseValue() {
@@ -102,6 +107,12 @@
         value < 1 ? (value = 1) : "";
         value--;
         document.getElementById("number").value = value;
+
+        // Check if value is greater than 1 - Limit the value
+        // if (value > 1) {
+        //   value--;
+        //   document.getElementById("number").value = value;
+        // }
       }
     </script>
   </body>
